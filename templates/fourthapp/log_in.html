@@ -1,0 +1,13 @@
+{%extends 'fourthapp/base.html'%}
+{%block body_block%}
+
+<form class="jumbotron" action="{%url 'special'%}" method="post">
+  {%csrf_token%}
+  <label for="username">Username</label>
+  <input type="text" name="username" value="">
+  <label for="password">Password</label>
+  <input type="password" name="password" value="">
+  <input type="submit" name="" value="Submit">
+
+</form>
+{%endblock%}

@@ -1,0 +1,28 @@
+{%extends 'fourthapp/base.html'%}
+
+{% block body_block%}
+<div class="jumbotron">
+  <h1>Welcome To Boltem</h1>
+  <h2>please log in or Sign Up</h2>
+
+    {% if registered%}
+    <h1>Thank you for regisstering</h1>
+    {%else%}
+    <form  method="POST" enctype="multipart/form-data">
+
+
+
+    {%csrf_token%}
+
+    {{user_info.as_p}}
+    {{profile_info.as_p}}
+    <input type="submit" value="Submit">
+  </form>
+    {%endif%}
+
+
+
+</div>
+
+
+{%endblock %}
